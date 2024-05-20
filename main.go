@@ -140,11 +140,11 @@ func addHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/view/", makeHandler(viewHandler))
-	http.HandleFunc("/edit/", makeHandler(editHandler))
-	http.HandleFunc("/save/", makeHandler(saveHandler))
+	http.HandleFunc("/go-app/view/", makeHandler(viewHandler))
+	http.HandleFunc("/go-app/edit/", makeHandler(editHandler))
+	http.HandleFunc("/go-app/save/", makeHandler(saveHandler))
 	http.HandleFunc("/", listHandler)
-	http.HandleFunc("/add", addHandler)
+	http.HandleFunc("/go-app/add", addHandler)
 	log.Println("The application is running on port 8686...")
 	log.Fatal(http.ListenAndServe(":8686", nil))
 }
