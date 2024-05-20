@@ -1,8 +1,8 @@
 <h1>{{.PageTitle}}</h1>
-<a href="/add" class="w3-btn w3-black"><button>Add note</button></a>
+<a href="/go-app/add" class="w3-btn w3-black"><button>Add note</button></a>
 <ul>
     {{range .Todos}}
-    <li><a href="/view/{{.Title}}" target="_blank" >{{.Title}}</a></li>
+    <li><a href="/go-app/view/{{.Title}}" target="_blank" >{{.Title}}</a></li>
     {{end}}
 </ul>
 <style>
