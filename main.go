@@ -66,7 +66,7 @@ func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	http.Redirect(w, r, "/view/"+title, http.StatusFound)
+	http.Redirect(w, r, "/go-app/view/"+title, http.StatusFound)
 }
 
 var templates = template.Must(template.ParseFiles("template/edit.html", "template/view.html"))
@@ -135,7 +135,7 @@ func addHandler(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		http.Redirect(w, r, "/view/"+title, http.StatusFound)
+		http.Redirect(w, r, "/go-app/view/"+title, http.StatusFound)
 	}
 }
 
